@@ -1,0 +1,89 @@
+CHALLENGE DATA – AGRICULTURE & MICROCRÉDIT
+
+Analyse de la performance agricole et financière des planteurs au Sénégal (2019–2023)
+
+
+CONTEXTE
+L’agriculture occupe une place centrale dans l’économie sénégalaise, avec des zones agroécologiques très différenciées et des cultures emblématiques comme le riz, l’arachide, l’anacarde, le coton ou encore les productions horticoles des Niayes.
+Dans ce challenge, vous êtes placé dans la peau d’un analyste chargé d’évaluer l’impact d’un programme de microcrédit agricole mis en place par une ONG auprès de planteurs répartis dans cinq grandes zones agricoles du pays :
+- Vallée du Fleuve Sénégal
+- Zone des Niayes
+- Bassin Arachidier
+- Casamance
+- Sénégal Oriental
+L’ONG souhaite comprendre comment les crédits octroyés influencent la productivité, la résilience et la performance économique des exploitations agricoles.
+Les données couvrent 50 planteurs, 5 années d’observation (2019–2023), plusieurs cultures par zone, et des informations financières détaillées
+
+
+STRUCTURE DU MODÈLE DE DONNÉES
+Le dataset est composé de 5 tables relationnelles, normalisées pour faciliter l’analyse dans Power BI.
+1. DimRegion
+Référentiel des régions agricoles.
+- id_region
+- nom_region
+2. DimVille
+Liste des villes associées à chaque région.
+- id_ville
+- nom_ville
+- id_region
+3. DimCulture
+Liste unique des cultures, indépendamment de la région.
+- id_culture
+- nom_culture
+
+4. DimFermier
+Informations de localisation des planteurs.
+- id_fermier
+- id_region
+- id_ville
+5. FaitAgriculture
+Table des faits contenant les mesures annuelles.
+- id_fermier
+- année
+- surface_km2
+- id_culture
+- rendement
+- montant_credit
+- montant_rembourse
+Chaque fermier peut cultiver une ou plusieurs cultures, et chaque culture génère une ligne par année, permettant une analyse temporelle fine.
+
+OBJECTIFS DU CHALLENGE
+
+Analyse agricole
+- Identifier les cultures les plus productives selon les zones agroécologiques.
+- Comparer les rendements des planteurs sur 5 ans.
+- Évaluer l’impact de la surface cultivée sur la performance agricole.
+- Détecter les zones les plus dynamiques
+
+Analyse financière
+- Mesurer l’adoption du microcrédit par les planteurs.
+- Évaluer l’impact du crédit sur l’évolution des rendements.
+- Analyser les comportements de remboursement.
+- Identifier les profils les plus performants économiquement.
+
+Analyse géographique
+- Cartographier les performances agricoles par région et par ville.
+- Comparer les dynamiques entre zones agroécologiques.
+- Identifier les zones prioritaires pour l’ONG.
+
+Analyse temporelle
+- Étudier l’évolution des rendements entre 2019 et 2023.
+- Détecter les années de forte ou faible performance.
+- Comprendre les tendances par culture et par région.
+
+INDICATEURS CLÉS (KPI)
+- Productivité (rendement / km²)
+- Évolution annuelle des rendements
+- Taux d’adoption du microcrédit
+- Montant total des crédits octroyés
+- Taux de remboursement
+- Performance agricole par culture
+- Performance par région et par ville
+- Nombre de planteurs actifs
+
+LIVRABLES ATTENDUS
+- Un rapport Power BI interactif
+- Une synthèse exécutive (insights clés)
+- Une analyse des performances agricoles
+- Une analyse de l’impact du microcrédit
+- Des recommandations opérationnelles pour l’ONG
